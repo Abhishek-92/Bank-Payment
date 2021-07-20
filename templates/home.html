@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>Bank Home</title>
+{% endblock title %}
+
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+    body {
+        background-image: url('{% static 'images/4.jpg' %}');
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: bottom;
+    }
+
+    .box {
+        padding-top: 30px;
+        padding-left: 200px;
+        font-size: 70px;
+        color: white;
+        font-family: 'Times New Roman', serif;
+        text-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    }
+
+    .but {
+        padding-left: 150px;
+        padding-top: 150px;
+    }
+</style>
+
+<div>
+    <h1 class="box">Welcome to TSF bank</h1>
+</div>
+
+<div class="container align-middle but">
+    <a href="{% url 'cust' %}" class="btn btn-success" style="font-size: 30px; margin-bottom: 40px; align = center">Start Transaction</a>
+    
+    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Hb8MmlFYHNhjfF" async> </script> </form>
+    </div>
+
+{% endblock content %}
